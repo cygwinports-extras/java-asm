@@ -1,0 +1,27 @@
+inherit java
+
+DESCRIPTION="Java bytecode manipulation framework"
+HOMEPAGE="http://asm.objectweb.org/"
+SRC_URI="http://download.forge.objectweb.org/asm/${P#java-}.tar.gz"
+SRC_DIR="${P#java-}"
+
+myjar=${PN#java-}.jar
+
+src_compile() {
+	lndirs
+	cd ${B}
+	${JAVAC} -d classes $(find src/ -name '*.java') || error "${JAVAC} failed"
+	(cd classes && ${JAR} cvf ../${myjar} org/) || error "${JAR} failed"
+
+#	(cd jdoc && ${JAVADOC} -use -sourcepath ../src -d html \
+#		-doctitle "ASM Documentation" -windowtitle "ASM Documentation" \
+#		-subpackages org) \
+#		|| error "${JAVADOC} failed"
+}
+
+src_install() {
+	cd ${B}
+	dojar ${myjar}
+#	dojavadoc jdoc/html
+}
+

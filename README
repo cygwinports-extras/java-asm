@@ -1,0 +1,58 @@
+java-asm
+------------------------------------------
+ASM is a Java bytecode manipulation framework. It can be used to 
+dynamically generate stub classes or other proxy classes, directly in 
+binary form, or to dynamically modify classes at load time, i.e., just 
+before they are loaded into the Java Virtual Machine.
+
+Runtime requirements:
+  classpath-0.93-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.24-2
+  cygport-0.3.1-1
+  classpath-0.93-1
+  fastjar-0.94-1
+  jamvm-1.4.5-1
+  jikes-1.22-4
+
+Canonical website:
+  http://asm.objectweb.org/
+
+Canonical download:
+  http://download.forge.objectweb.org/asm/
+
+-------------------------------------------
+
+Build instructions:
+  unpack java-asm-2.2.3-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./java-asm-2.2.3-X.cygport all
+
+This will create:
+  /usr/src/java-asm-2.2.3-X-src.tar.bz2
+  /usr/src/java-asm-2.2.3-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/share/doc/Cygwin/java-asm-2.2.3.README
+  /usr/share/doc/java-asm-2.2.3/LICENSE.txt
+  /usr/share/doc/java-asm-2.2.3/README.txt
+  /usr/share/java/asm.jar
+
+------------------
+
+Port Notes:
+
+----- version 2.2.3-1 -----
+Initial release for Cygwin.
+Version 3.0 needs to wait for a new version of GNU Classpath.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
