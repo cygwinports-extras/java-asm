@@ -2,8 +2,7 @@ inherit java
 
 DESCRIPTION="Java bytecode manipulation framework"
 HOMEPAGE="http://asm.objectweb.org/"
-SRC_URI="http://download.forge.objectweb.org/asm/${P#java-}.tar.gz"
-SRC_DIR="${P#java-}"
+SRC_URI="http://download.forge.objectweb.org/asm/${ORIG_PN}-${PV}.tar.gz"
 
 myjar=${PN#java-}.jar
 
