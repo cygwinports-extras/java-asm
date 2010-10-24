@@ -1,5 +1,5 @@
 category: Java
-requires: classpath
+requires:
 sdesc: "Java bytecode manipulation framework"
 ldesc: "ASM is a Java bytecode manipulation framework. It can be used to
 dynamically generate stub classes or other proxy classes, directly in

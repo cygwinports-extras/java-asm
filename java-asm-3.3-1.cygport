@@ -1,0 +1,10 @@
+inherit ant
+
+DESCRIPTION="Java bytecode manipulation framework"
+HOMEPAGE="http://asm.ow2.org/"
+SRC_URI="http://download.forge.objectweb.org/asm/${ORIG_PN}-${PV}.tar.gz"
+
+ANT_BUILD_ARGS="-Dobjectweb.ant.tasks.path=none"
+ANT_BUILD_TARGETS="jar jdoc"
+ANT_INSTALL_JARS="output/dist/lib/*.jar"
+ANT_INSTALL_JAVADOC="output/dist/doc/javadoc/user"
